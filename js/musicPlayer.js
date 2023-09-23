@@ -28,7 +28,7 @@ const music_list =
         name: 'Found The Way',
         artist: 'Sad:Puppy',
         music: './musics/track1.mp3',
-        bpm: 123.5,
+        bpm: 123.75,
         startBump: 30, // Em segundos representados pelo duraction do elemento audio.
     },
     {
@@ -36,15 +36,15 @@ const music_list =
         name: 'Do It To It',
         artist: 'Acraze feat. Cherish',
         music: 'https://zamona.net/storage/music/19331.mp3',
-        bpm: 124.8,
+        bpm: 124.9,
         startBump: 32, // Em segundos representados pelo duraction do elemento audio.
     },
     {
         img: 'https://i.discogs.com/IG6w1hmWORZqrKIhkypcXHPAhvhbOZlfyn9VvVET198/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE2MTc4/NzgxLTE2MDQ3Nzg1/ODktMzEzNy5qcGVn.jpeg',
-        name: 'Do It To It',
-        artist: 'Acraze feat. Cherish',
+        name: 'Dying Breed',
+        artist: 'Five Finger Death Punch',
         music: './musics/track2.mp3',
-        bpm: 195.6,
+        bpm: 195.7,
         startBump: 0, // Em segundos representados pelo duraction do elemento audio.
     }
 ]
