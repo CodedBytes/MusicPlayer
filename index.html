@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="player-container">
+        <div class="bpm-animated" id="track-img"></div>
+
+        <div class="interactive">
+            <h2 class="track-name">Nome</h2>
+            <h4 class="track-artist">Artista</h2>
+
+            <div class="music-timer" id="timer">
+                <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100" value="0" class="seek-slider" onchange="seekTo();">
+                <div class="total-duration">00:00</div>
+            </div>
+
+            <div class="volume-timer" id="vol">
+                <i class="fa fa-volume-down"></i>
+                <input type="range" min="1" max="100" value="50" class="volume-slider" onchange="setVolume();">
+                <i class="fa fa-volume-up"></i>
+            </div>
+
+            <div class="player-buttons">
+                <div class="prev-music" onclick="prevTrack();">
+                    <i class="fa fa-step-backward fa-2x"></i>
+                </div>
+
+                <div class="playpause-music" id="play" onclick="playpauseMusic();" >
+                    <i class="fa fa-play-circle fa-3x" ></i>
+                </div>
+
+                <div class="next-music" onclick="nextTrack();">
+                    <i class="fa fa-step-forward fa-2x"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="social-medias">
+            <a href="https://www.linkedin.com/in/joãovdev/"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+            <a href="https://www.github.com/CodedBytes/"><i class="fa-brands fa-github-square fa-2x"></i></a>
+            <a href="#"><i class="fa-solid fa-pager fa-2x"></i></a>
+        </div>
+    </div>
+
+    <script src="./js/musicPlayer.js"></script> 
+</body>
+</html>

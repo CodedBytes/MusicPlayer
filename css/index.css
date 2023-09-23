@@ -1,0 +1,116 @@
+:root{
+    --default-font: "Arial";
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--default-font);
+}
+
+.player-container{
+    width: 320px;
+    height: 500px;
+    background-color: rgba(1, 1, 1, 0.015);
+    border-radius: 20px;
+    padding: 15px 20px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.player-container > .bpm-animated{
+    background-position: center;
+    background-size: 150px;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 15px;
+    border-radius: 50%;
+    transition: 0.075s;
+}
+.player-container > .bpm-animated.bump{
+    background-position: center;
+    background-size: 170px;
+    width: 170px;
+    height: 170px;
+    transition: 0.075s;
+}
+
+.player-container > .interactive {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 190px;
+    align-items: center;
+}
+
+.player-container > .interactive > .music-timer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 240px;
+    margin: 15px 0px 10px 0px;
+}
+.player-container > .interactive > .volume-timer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 170px;
+}
+
+.player-container > .interactive > .player-buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 160px;
+}
+
+.player-container > .interactive > .player-buttons i{
+    color: rgb(0, 102, 255);
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}
+
+.player-container > .interactive > .player-buttons i:hover{
+    color: rgb(3, 62, 152);
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}
+
+.player-container > .social-medias{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 170px;
+    position: absolute;
+    margin: auto;
+    top: 430px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.player-container > .social-medias > a{
+    color: rgb(0, 102, 255);
+    height: 30px;
+    text-decoration: none;
+    transition: 0.1s ease-in;
+}
+.player-container > .social-medias > a:hover{
+    color: rgb(3, 62, 152);
+    transition: 0.1s ease-out;
+}
