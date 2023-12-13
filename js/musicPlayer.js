@@ -46,6 +46,22 @@ const music_list =
         music: './musics/track2.mp3',
         bpm: 195.7,
         startBump: 0, // Em segundos representados pelo duraction do elemento audio.
+    },
+    {
+        img: 'https://i.ytimg.com/vi/YHVr8XfuhIA/sddefault.jpg',
+        name: 'Stand By Me now',
+        artist: 'Playmen (Gioni Remix)',
+        music: './musics/track3.mp3',
+        bpm: 140,
+        startBump: 0, // Em segundos representados pelo duraction do elemento audio.
+    },
+    {
+        img: 'https://i.ytimg.com/vi/QiJC4FKWppM/sddefault.jpg',
+        name: 'Write this down',
+        artist: '2Pac & Pop Smoke (ft. Various Rap Artists)',
+        music: 'https://ia802209.us.archive.org/10/items/2pac-pop-smoke-write-this-down-ft-biggie-dmx-eazy-e-ice-cube-dr-dre-nwa-nipsey-snoop-dogg/2pac-pop-smoke-write-this-down-ft-biggie-dmx-eazy-e-ice-cube-dr-dre-nwa-nipsey-snoop-dogg.mp3',
+        bpm: 190,
+        startBump: 0, // Em segundos representados pelo duraction do elemento audio.
     }
 ]
 
@@ -94,7 +110,6 @@ async function playpauseMusic()
 // Função para iniciar musica.
 function playMusic()
 {
-    
     curr_track.play();
     is_playing = true;
     playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-3x"></i>';
@@ -113,9 +128,7 @@ function pauseMusic()
 // Pulando para a proxima musica
 function nextTrack()
 {
-    if(music_index < music_list.length - 1) music_index++;
-    else music_index = 0;
-
+    (music_index < music_list.length - 1) ? music_index++ : music_index = 0;
     loadTrack(music_index);
     clearInterval(interval);
     isBumping = false;
@@ -125,9 +138,7 @@ function nextTrack()
 // Voltando para musica anterior
 function prevTrack()
 {
-    if(music_index > 0) music_index -= 1;
-    else music_index = music_list.length - 1;
-    
+    (music_index > 0) ? music_index -= 1 : music_index = music_list.length - 1;
     loadTrack(music_index);
     clearInterval(interval);
     isBumping = false;
@@ -174,9 +185,7 @@ function setUpdate()
 }
 
 // Função responsavel por esperar antes de fazer algo.
-function delay(time) {
-    return new Promise(resolve => setTimeout(resolve, time));
-}
+function delay(time) { return new Promise(resolve => setTimeout(resolve, time)); }
 
 // Função para animação de beat.
 async function bump(){
